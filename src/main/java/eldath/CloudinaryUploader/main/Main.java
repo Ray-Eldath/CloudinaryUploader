@@ -15,7 +15,9 @@ import static eldath.CloudinaryUploader.main.Config.*;
  * @version 0.0.1
  */
 public class Main {
-    // !PLEASE READ README.MD FIRST TO CONFIRM THAT YOU HAS BEEN PROPERLY CONFIGURED Config.java FILE!
+    /**
+     * <strong>!PLEASE READ README.MD FIRST TO CONFIRM THAT YOU HAS BEEN PROPERLY CONFIGURED Config.java FILE!</strong>
+     */
     private static List<File> allFiles = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
@@ -23,7 +25,6 @@ public class Main {
         config.put("cloud_name", CLOUD_NAME);
         config.put("api_key", API_KEY);
         config.put("api_secret", API_SECRET);
-        config.put("use_filename", USE_FILENAME);
         config.put("secure", EMBEDDED_SSL);
         if (USE_ORIGINAL_FILENAME) {
             config.put("invalidate", true);
