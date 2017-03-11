@@ -1,0 +1,14 @@
+group 'eldath-ray'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'com.cloudinary', name: 'cloudinary-http44', version: '1.9.0'
+}
