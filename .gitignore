@@ -25,4 +25,4 @@ hs_err_pid*
 /.idea
 .gradle/
 build/
-src/main/java/eldath/CloudinaryUploader/main/Config.java
+Config.java

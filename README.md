@@ -7,7 +7,6 @@ A tool which can upload any files to Cloudinary.
 ```Java
 package eldath.CloudinaryUploader.main;
 
-@SuppressWarnings("JavaDoc")
 class Config {
     static final String CLOUD_NAME = "YOUR_CLOUD_NAME";
     static final String API_KEY = "YOUR_API_KEY";
@@ -25,62 +24,48 @@ class Config {
 
 **Importance: Please config `Config.java` file with illustration in *Chapter: Configure* !**
 
-## Configure
-In this section we will config the `Config.java` file. First I'll show you one line or some lines of `Config.java` file, than I'll show you the illustration to it.
+## Configuration
+In this section we will config the `Config.java` file. First is the explanation.
 
----
+> ```
+> static final String CLOUD_NAME = "YOUR_CLOUD_NAME";
+> static final String API_KEY = "YOUR_API_KEY";
+> static final String API_SECRET = "YOUR_API_SECRET";
+> ```
+> You will get your CLOUD_NAME API_KEY and API_SECRET on [here](https://cloudinary.com/console).
 
-```
-static final String CLOUD_NAME = "YOUR_CLOUD_NAME";
-static final String API_KEY = "YOUR_API_KEY";
-static final String API_SECRET = "YOUR_API_SECRET";
-```
-You will get your CLOUD_NAME API_KEY and API_SECRET on [here](https://cloudinary.com/console).
+> ```
+> static final String PATH = "F:/Code/IMG";
+> ```
+> Upload image/file from where. Must be absolute path.
 
----
+> ```
+> static final String PREFIX = "";
+> ```
+> The prefix before image url.
+> e.g. If the prefix is "eldath", than the URL will be `http://res.cloudinary.com/.../image/upload/eldath/...png` instead of  `http://res.cloudinary.com/.../image/upload/...png`.
 
-```
-static final String PATH = "F:/Code/IMG";
-```
-Upload image/file from where. Must be absolute path.
+> ```
+> static final boolean WITH_FILE_PATH = true;
+> ```
+> Contain file path in the URL or not.
+> e.g. If true, than the URL will be `http://res.cloudinary.com/.../image/upload/eldath/folder-1/folder-2/file.png`.
 
----
+> ```
+> static final boolean USE_ORIGINAL_FILENAME = true;
+> ```
+> Use original filename in the URL or contain a random suffix.
+> e.g. If true, than the URL will like: `http://res.cloudinary.com/.../image/upload/demo-axrgfzf.png` instead of `http://res.cloudinary.com/.../image/upload/demo.png`.
 
-```
-static final String PREFIX = "";
-```
-The prefix before image url.
-e.g. If the prefix is "eldath", than the URL will be `http://res.cloudinary.com/.../image/upload/eldath/...png` instead of  `http://res.cloudinary.com/.../image/upload/...png`.
+> ```
+> static final boolean EMBEDDED_SSL = true;
+> ```
+> Use HTTPS(SSL over HTTP) or not.
+> e.g. If true, the URL will begin with `https://` instead of `http://`.
 
----
-
-```
-static final boolean WITH_FILE_PATH = true;
-```
-Contain file path in the URL or not.
-e.g. If true, than the URL will be `http://res.cloudinary.com/.../image/upload/eldath/folder-1/folder-2/file.png`.
-
----
-
-```
-static final boolean USE_ORIGINAL_FILENAME = true;
-```
-Use original filename in the URL or contain a random suffix.
-e.g. If true, than the URL will like: `http://res.cloudinary.com/.../image/upload/demo-axrgfzf.png` instead of `http://res.cloudinary.com/.../image/upload/demo.png`.
-
----
-
-```
-static final boolean EMBEDDED_SSL = true;
-```
-Use HTTPS(SSL over HTTP) or not.
-e.g. If true, the URL will begin with `https://` instead of `http://`.
-
----
-
-```
-static final boolean DEBUG = false;
-```
-Only for developers.
+> ```
+> static final boolean DEBUG = false;
+> ```
+> Only for developers.
 
 # That's all

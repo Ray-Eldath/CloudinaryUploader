@@ -1,5 +1,5 @@
-group 'eldath-ray'
-version '1.0-SNAPSHOT'
+group 'ray.eldath'
+version 'v1.0.0'
 
 apply plugin: 'java'
 
@@ -10,5 +10,6 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile group: 'com.cloudinary', name: 'cloudinary-http44', version: '1.9.0'
+	// https://mvnrepository.com/artifact/com.cloudinary/cloudinary-http44
+	compile group: 'com.cloudinary', name: 'cloudinary-http44', version: '1.18.0'
 }
